@@ -1,0 +1,16 @@
+package exercício1_consumodecombustivel;
+ import java.util.Scanner;
+public class Exercício1_ConsumoDeCombustivel {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Consumo médio do automóvel (Km/L)");
+	double km, litros, comUMlitro;
+	System.out.print("Digite a quilometragem(km) percorrida: ");
+	km = input.nextDouble();
+	System.out.print("Digite a quantidade de litro gasto: ");
+	litros = input.nextDouble();
+	comUMlitro = km / litros;
+	System.out.printf("\nA media de consumo do seu automóvel é: %.1fKm/L",comUMlitro);
+    }
+    
+}

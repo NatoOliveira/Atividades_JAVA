@@ -1,0 +1,16 @@
+package exercício1_tempoparaenviaarquivo;
+import java.util.Scanner;
+public class Exercício1_TempoParaEnviaArquivo {
+    public static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Cálculo de tempo para enviar arquivos");
+	System.out.println("Obs:Ultilize os valores de arquivos em Kb(Kilobyte).\n(1Mb = 1024Kb)");
+        double tamanho_do_arquivo, segundos_obtidos, minutos;
+	System.out.print("Digite o tamanho do arquivo: ");
+	tamanho_do_arquivo = input.nextDouble();
+        segundos_obtidos = (tamanho_do_arquivo * 10)/1000;
+	minutos = (segundos_obtidos)/60;
+	System.out.printf("\nOs MINUTOS necessaarios para o envio do arquivo é de: %.2f min",minutos);
+    }
+    
+}

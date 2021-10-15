@@ -1,0 +1,124 @@
+package prova_1.adivinhaçãodeanimais;
+import java.util.Scanner;
+public class Prova_1Adivinhaçãodeanimais {
+
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        System.out.print("Jogo de advinhação do animal\n\nDigite 1 para 'sim'\nDigite 0 para 'não'.\n\n");
+        int resposta;
+        System.out.print("O seu animal é um mamímefero? ");
+        resposta = leia.nextInt();
+        if(resposta==1){
+            System.out.print("O seu animal é um quadrúpede? ");
+            resposta = leia.nextInt();
+            if(resposta==1){
+		System.out.print("O seu animal é carnívoro? ");
+		resposta = leia.nextInt();
+                if(resposta==1){
+                    System.out.print("Seu animal é um leão!");
+                    }else if(resposta==0){
+                        System.out.print("O seu animal é herbívoro? ");
+                        resposta = leia.nextInt();
+			if(resposta==1){
+                            System.out.print("O seu animal é um cavalo!");
+                        }else if(resposta==0){
+                            System.out.print("Seu animal não se encontra na nossa lista!");
+			}
+                    }
+            }else if(resposta==0){
+                System.out.print("O animal é bípede? ");
+                resposta = leia.nextInt();
+                if(resposta==1){
+                    System.out.print("O animal é onívoro? ");
+                    resposta = leia.nextInt();
+                    if(resposta==1){
+                        System.out.print("O animal é um Homem!");
+                    }else if(resposta==0){
+			System.out.print("O seu animal é frutifero? ");
+			resposta = leia.nextInt();
+                        if(resposta==1){
+                            System.out.print("O seu animal é um macaco!");
+			}else if(resposta==0){
+                            System.out.print("Seu animal não se encontra na nossa lista!");
+			}
+                    }
+		}else if(resposta==0){
+                    System.out.print("O animal é voador? ");
+                    resposta = leia.nextInt();
+                    if(resposta==1){
+                        System.out.print("O seu animal é um morcego!");
+                    }else if(resposta==0){
+			System.out.print("O seu animal é aquatico? ");
+			resposta = leia.nextInt();
+			if(resposta==1){
+                            System.out.print("O seu animal é uma baleia!");
+			}else if(resposta==0){
+                            System.out.print("O seu animal não se encontra na nossa lista!");
+			}
+                    }
+		}
+            }
+		}else if(resposta==0){
+                    System.out.print("O seu animal é uma ave? ");
+			resposta = leia.nextInt();
+			if(resposta==1){
+                            System.out.print("O Seu animal é não-voador? ");
+                            resposta = leia.nextInt();
+                            if(resposta==1){
+				System.out.print("O seu animal é tropical? ");
+				resposta = leia.nextInt();
+				if(resposta==1){
+                                    System.out.print("O seu animal é um avestruz!");
+				}else if(resposta==0){
+                                    System.out.print("O seu aniaml é polar? ");
+                                    resposta = leia.nextInt();
+                                    if(resposta==1){
+                                        System.out.print("O seu animal é um pinguim!");
+                                    }else if(resposta==0){
+					System.out.print("O seu animal não se encontra na nossa lista!");
+                                    }
+				}
+                            }else if(resposta==0){
+				System.out.print("O seu animal é nadador? ");
+				resposta = leia.nextInt();
+				if(resposta==1){
+                                    System.out.print("O seu animal é um pato!");
+				}else if(resposta==0){
+                                    System.out.print("O seu animal é de rapina? ");
+                                    if(resposta==1){
+                                    System.out.print("A sua ave é uma águia!");
+				}else if(resposta==0){
+                                    System.out.print("O seu animal não se encontra na nossa lista!");
+                                }
+                            }
+                        }
+                    }else if(resposta==0){
+			System.out.print("O seu animal é um réptil? ");
+			resposta = leia.nextInt();
+			if(resposta==1){
+                            System.out.print("O seu animal tem casco? ");
+                            resposta = leia.nextInt();
+                            if(resposta==1){
+				System.out.print("O seu animal é uma tartatura!");
+                            }else if(resposta==0){
+				System.out.print("O seu animal é carnívoro? ");
+				resposta = leia.nextInt();
+                                if(resposta==1){
+                                    System.out.print("O seu animal é um crododilo!");
+				}else if(resposta==0){
+                                    System.out.print("O seu animal é sem patas? ");
+                                    resposta = leia.nextInt();
+                                    if(resposta==1){
+                                        System.out.print("O seu animal é uma cobra!");
+                                    }else if(resposta==0){
+					System.out.print("O seu animal não se encontra na nossa lista!");
+                                    }
+				}
+                            }
+			}else if(resposta==0){
+                            System.out.print("O seu animal não se encontra na nossa lista!");
+                        }
+                }
+            }
+	}
+    }

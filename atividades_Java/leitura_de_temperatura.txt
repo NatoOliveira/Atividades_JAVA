@@ -1,0 +1,14 @@
+package exercício1_leituradetemperatura;
+import java.util.Scanner;
+public class Exercício1_LeituraDeTemperatura {
+    public static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Converso de temperatura: De Celsios(°C) para Fahrenheit(°F)");
+        double F, C;
+        System.out.print("Digite o valor em °C: ");
+        C = input.nextDouble();
+        F = (9*C+160)/5;
+        System.out.printf("Essa temperatura em °F é: "+F+("\n"));
+    }
+    
+}

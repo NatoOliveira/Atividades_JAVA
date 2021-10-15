@@ -1,0 +1,18 @@
+package exercício2_anobissexto;
+import java.util.Scanner;
+public class Exercício2_AnoBissexto{
+    public static void main(String[] args) {
+        Scanner digite = new Scanner(System.in);
+        int ano;
+        System.out.print("Digite o ano: ");
+        ano = digite.nextInt();
+        if(ano % 400 == 0){
+            System.out.println("Ano é bissexto!");
+        }else if(ano%4 == 0 && ano%100!=0){
+            System.out.println("Ano é bissexto!");
+        }else{
+            System.out.println("Ano não é bissexto!");
+        }
+    }
+    
+}

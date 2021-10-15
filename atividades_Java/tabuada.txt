@@ -1,0 +1,31 @@
+package tabuada2ºmodulo;
+import java.util.Scanner;
+public class Tabuada2ºmodulo {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        int numero, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10;
+        System.out.print("Digite um número:  ");
+        numero = leia.nextInt();
+        r1 = numero * 1;
+        r2 = numero * 2;
+        r3 = numero * 3;
+        r4 = numero * 4;
+        r5 = numero * 5;
+        r6 = numero * 6;
+        r7 = numero * 7;
+        r8 = numero * 8;
+        r9 = numero * 9;
+        r10 = numero * 10;
+        System.out.print(numero+" * 1 = "+r1+"\n");
+        System.out.print(numero+" * 2 = "+r2+"\n");
+        System.out.print(numero+" * 3 = "+r3+"\n");
+        System.out.print(numero+" * 4 = "+r4+"\n");
+        System.out.print(numero+" * 5 = "+r5+"\n");
+        System.out.print(numero+" * 6 = "+r6+"\n");
+        System.out.print(numero+" * 7 = "+r7+"\n");
+        System.out.print(numero+" * 8 = "+r8+"\n");
+        System.out.print(numero+" * 9 = "+r9+"\n");
+        System.out.print(numero+" * 10 = "+r10+"\n");
+    }
+    
+}

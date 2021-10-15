@@ -1,0 +1,150 @@
+package exercício2_auxilioemegencial;
+import java.util.Scanner;
+public class Exercício2_AuxilioEmegencial {
+    public static void main(String[] args) {
+        Scanner digite = new Scanner(System.in);
+        System.out.println("Auxílio Emegencial");
+        System.out.println("USE (1) PARA SIM E (0) PARA NÃO." );
+        String nome;
+        double beneficio, Rpercapital, Rtotal;
+        int resposta, idade;
+        resposta = 0;
+        beneficio = 0;
+        System.out.print(
+            System.out.print("\nInforme a sua idade: ");
+            idade = digite.nextInt();"Informe seu nome: ");
+        nome = digite.next();
+        System.out.print("\nEscolha entre o benefício de R$600,00 ou R$1200,00: ");
+        beneficio = digite.nextInt();
+        if(beneficio == 600){
+            if(idade >= 18){
+                System.out.print("\nVocê está trabalhando formalmente? ");
+                resposta = digite.nextInt();
+                if(resposta == 0){
+                    System.out.println("\nVocê receber benefício previdenciário ou assistencial, seguro-desemprego");
+                    System.out.print("ou de outro programa de transferência de renda federal que não seja o Bolsa Família? ");
+                    resposta = digite.nextInt();
+                    if(resposta == 0){
+                        System.out.print("\nVocê quer usar sua renda total(digite:'1') ou média per capital(digite:'0')? ");
+                        resposta = digite.nextInt();
+                        if(resposta == 1){
+                            System.out.print("\nQual sua renda total? ");
+                            Rtotal = digite.nextDouble();
+                            if(Rtotal <= 3300){
+                                System.out.println("\nVocê está desempregado");
+                                System.out.println("ou exercer atividade na condição de microempreendedor individual (MEI);");
+                                System.out.println("É contribuinte individual facultativo do Regime");
+                                System.out.println("geral de Previdência Social (RGPS);");
+                                System.out.print("Trabalhador informal inscrito no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico)? ");
+                                resposta = digite.nextInt();
+                                if(resposta == 1){
+                                    System.out.println("\nParabéns "+nome+"! Você foi contemplado e receberá R$600,00 reais");
+                                }else if(resposta == 0){
+                                    System.out.println("Desculpe, infelizmente vecê não tem direito ao auxílio!");
+                                }
+                            }else{
+                                System.out.println("Desculpe,infelizmente você não tem direito ao auxílio! Sua renda mensal total é maior que R$3300,00");
+                            }
+                        }else if(resposta == 0){
+                            System.out.print("\nQual sua renda per capital? ");
+                            Rpercapital = digite.nextDouble();
+                            if(Rpercapital <= 550){
+                                System.out.println("\nVocê está desempregado");
+                                System.out.println("ou exercer atividade na condição de microempreendedor individual (MEI);");
+                                System.out.println("É contribuinte individual facultativo do Regime");
+                                System.out.println("geral de Previdência Social (RGPS);");
+                                System.out.print("Trabalhador informal inscrito no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico)? ");
+                                resposta = digite.nextInt();
+                                if(resposta == 1){
+                                    System.out.println("\nParabéns "+nome+"! Você foi contemplado e receberá R$600,00 reais");
+                                }else if(resposta == 0){
+                                    System.out.println("Desculpe, infelizmente vecê não tem direito ao auxílio!");
+                                }
+                            }else{
+                                System.out.println("Desculpe,infelizmente você não tem direito ao auxílio! Sua renda per capital é maior que R$550,00");
+                            }
+                        }
+                    }else if(resposta == 1){
+                        System.out.println("Desculpe, infelizmente você não tem direito ao auxílio por receber benefício de outra instituição!");
+                    }
+                }else if(resposta == 1){
+                    System.out.println("Desculpe, infelizmente você não tem direito ao auxílio por esta trabalhando formalmente!");
+                }
+            }else{
+                System.out.println("Desculpe, infelizmente você ainda não tem idade para receber o auxílio!");
+            }
+        }else if(beneficio == 1200){
+            System.out.print("\nVocê é do gênero feminino(digite:'1') ou masculino(digite:'0'): ");
+            resposta = digite.nextInt();
+            if(resposta == 1){
+                System.out.print("\nVocê é resposável por todas as dispesas da sua residência? ");
+                resposta = digite.nextInt();
+                if(resposta == 1){
+                    System.out.print("\nInforme a sua idade: ");
+                    idade = digite.nextInt();
+                    if(idade >= 18){
+                        System.out.print("\nVocê está trabalhando formalmente? ");
+                        resposta = digite.nextInt();
+                        if(resposta == 0){
+                            System.out.println("\nVocê receber benefício previdenciário ou assistencial, seguro-desemprego");
+                            System.out.print("ou de outro programa de transferência de renda federal que não seja o Bolsa Família? ");
+                            resposta = digite.nextInt();
+                            if(resposta == 0){
+                                System.out.print("\nVocê quer usar sua renda total(digite:'1') ou média per capital(digite:'0')? ");
+                                resposta = digite.nextInt();
+                                if(resposta == 1){
+                                    System.out.print("\nQual sua renda total? ");
+                                    Rtotal = digite.nextDouble();
+                                    if(Rtotal <= 3300){
+                                        System.out.println("\nVocê está desempregado");
+                                        System.out.println("ou exercer atividade na condição de microempreendedor individual (MEI);");
+                                        System.out.println("É contribuinte individual facultativo do Regime");
+                                        System.out.println("geral de Previdência Social (RGPS);");
+                                        System.out.print("Trabalhador informal inscrito no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico)? ");
+                                        resposta = digite.nextInt();
+                                        if(resposta == 1){
+                                            System.out.println("\nParabéns "+nome+"! você foi contemplado e receberá R$1200,00 reais");
+                                        }else if(resposta == 0){
+                                            System.out.println("Desculpe, infelizmente vecê não tem direito ao auxílio!");
+                                        }
+                                    }else{
+                                        System.out.println("Desculpe,infelizmente você não tem direito ao auxílio! Sua renda mensal total é maior que R$3300,00");
+                                    }
+                                }else if(resposta == 0){
+                                    System.out.print("\nQual sua renda per capital? ");
+                                    Rpercapital = digite.nextDouble();
+                                    if(Rpercapital <= 550){
+                                        System.out.println("\nVocê está desempregado");
+                                        System.out.println("ou exercer atividade na condição de microempreendedor individual (MEI);");
+                                        System.out.println("É contribuinte individual facultativo do Regime");
+                                        System.out.println("geral de Previdência Social (RGPS);");
+                                        System.out.print("Trabalhador informal inscrito no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico)? ");
+                                        resposta = digite.nextInt();
+                                        if(resposta == 1){
+                                            System.out.println("\nParabéns "+nome+"! Você foi contemplado e receberá R$1200,00 reais");
+                                        }else if(resposta == 0){
+                                            System.out.println("Desculpe, infelizmente vecê não tem direito ao auxílio!");
+                                        }
+                                    }else{
+                                        System.out.println("Desculpe,infelizmente você não tem direito ao auxílio! Sua renda per capital é maior que R$550,00");
+                                    }
+                                }
+                            }else if(resposta == 1){
+                                System.out.println("Desculpe, infelizmente você não tem direito ao auxílio por receber benefício de outra instituição!");
+                            }
+                        }else if(resposta == 1){
+                            System.out.println("Desculpe, infelizmente você não tem direito ao auxílio por esta trabalhando formalmente!");
+                        }
+                    }else{
+                        System.out.println("Desculpe, infelizmente você ainda não tem idade para receber o auxílio!");
+                    }
+                }else if(resposta == 0){
+                    System.out.println("Desculpe, apenas mulheres 100% responsaveis pelas dispesas da casa podem receber o auxílio de R$1200,00");
+                }
+            }else if(resposta == 0){
+                System.out.println("Desculpe, apenas pessoas do gênero feminino tem direito ao auxílio de R$1200,00");
+            }
+        }
+    }
+    
+}

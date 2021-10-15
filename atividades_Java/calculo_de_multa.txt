@@ -1,0 +1,25 @@
+package exercício2_cálculodemulta;
+import java.util.Scanner;
+public class Exercício2_CálculoDeMulta {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        int Vrua, Vcarro, Vexe;
+        System.out.println("Cálculo de multa");
+        System.out.print("\nDigite a velocidade(km) permitida na rua : ");
+        Vrua = leia.nextInt();
+        System.out.print("Digite a velocidade(km) do carro : ");
+        Vcarro = leia.nextInt();
+        if(Vrua < Vcarro){
+            Vexe = Vcarro - Vrua;
+            if(Vexe <= 10){
+                System.out.println("\nSua multa é de R$50,00");
+            }else if(Vexe <=30){
+                System.out.println("\nSua multa é de R$100,00");
+            }else if(Vexe >=31){
+                System.out.println("\nSua multa é de R$300,00");
+            }
+        }else{
+            System.out.println("\nEsse carro não passou o limite de velocidade.");
+        }
+    }
+}

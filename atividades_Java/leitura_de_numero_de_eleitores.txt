@@ -1,0 +1,27 @@
+package exercício1_leituradenumerodeeleitores;
+import java.util.Scanner;
+public class Exercício1_LeituraDeNumeroDeEleitores {
+    public static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Percentual de votos eleitorais");
+        String municipio;
+        System.out.print("Escreva o nome do seu município: ");
+        municipio = input.next();
+        int Vbrancos, Vnulos, Vvalidos, eleitores, Pbrancos, Pnulos, Pvalidos;
+        System.out.print("Digite o número de votos brancos: ");
+        Vbrancos = input.nextInt();
+        System.out.print("Digite o número de votos nulos: ");
+        Vnulos = input.nextInt();
+        System.out.print("Digite o número de votos válidos: ");
+        Vvalidos = input.nextInt();
+        eleitores = Vbrancos+Vvalidos+Vnulos;
+        System.out.println("O número de eleitores é: "+eleitores);
+        Pbrancos = (Vbrancos*100)/eleitores;
+        Pnulos = (Vnulos*100)/eleitores;
+	Pvalidos =(Vvalidos*100)/eleitores;
+        System.out.println("A % de votos brancos é: "+ Pbrancos+"%");
+        System.out.println("A % de votos nulos é: "+ Pnulos+"%");
+        System.out.println("A % de votos válidos é: "+Pvalidos+"%");
+        
+    }
+}

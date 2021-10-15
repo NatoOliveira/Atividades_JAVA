@@ -1,0 +1,15 @@
+package exercício1_cálculodeáreadeumquadrilatero;
+import java.util.Scanner;
+public class Exercício1_CálculoDeÁreaDeUmQuadrilatero {
+    public static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Cálculo de área para quadriláteros");
+        double base, altura, area;
+        System.out.print("Digite o valor da base: ");
+        base = input.nextDouble();
+        System.out.print("Digite o valor da altura: ");
+        altura = input.nextDouble();
+        area = base*altura;
+        System.out.println("A área do seu quadrilátero é de: "+area);
+    } 
+}

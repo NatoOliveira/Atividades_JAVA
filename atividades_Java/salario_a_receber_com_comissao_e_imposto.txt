@@ -1,0 +1,18 @@
+package exercício1_sálarioarecebercomgratificaçõeimposto;
+import java.util.Scanner;
+public class Exercício1_SálarioAReceberComGratificaçõEImposto {
+    public static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Cálculo de sálario");
+        double salario_base, gratificacao, imposto, valor_a_receber;
+        System.out.print("Informe o valor do seu sálario base: ");
+        salario_base = input.nextDouble();
+        gratificacao = (salario_base*5)/100;
+        System.out.println("Sua gratificação é de: "+gratificacao);
+        imposto = (salario_base*3)/100;
+        System.out.println("Seu imposto é de: "+imposto);
+        valor_a_receber = salario_base+gratificacao+imposto;
+        System.out.println("Você recebera: "+valor_a_receber);
+    }
+    
+}

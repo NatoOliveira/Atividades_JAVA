@@ -1,0 +1,44 @@
+package imc;
+//importei o scanner para conseguir digitar na tela;
+import java.util.Scanner;
+public class Imc {
+//criei um objeto "dados" para digitar na tela;
+public static Scanner dados = new Scanner(System.in);
+    public static void main(String[] args) {
+        //declarei as variaveis
+        String  nome, resposta;
+        resposta = "voltar";
+        double peso, altura, imc;
+            //Informo o usuário para que serve a calculadora com um titulo;        
+            System.out.println("CALCULADORA DE IMC(Índice de Massa Corporal)");
+            //Abri um laço de repetição para que o usuário possa voltar ao inicio no final do processo;
+            while ("voltar".equals(resposta)){
+                //peço os dados do usuário;
+                System.out.print("informe seus dados:\n\nDIGITE SEU NOME: ");
+		nome = dados.next();
+		System.out.print("DIGITE SEU PESO(Kg): ");
+		peso = dados.nextDouble();
+		System.out.print("DIGITE SUA ALTURA(m): ");
+		altura = dados.nextDouble();
+                //Com os dados fornecidos, o progama faz o cálculo;
+                imc = peso/(altura*altura);
+                //Com o resultado do cálculo, o progama encaixa ele na resposta de saída;
+                if (imc<18.5){
+                   System.out.printf("\nO IMC de "+nome+" é %.1f%s",imc," e está abaixo do peso.");
+		}else if(imc<=24.9){
+                   System.out.printf("\nO IMC de "+nome+" é %.1f%s",imc," e está no peso ideal.");
+		}else if(imc<=29.9){
+                   System.out.printf("\nO IMC de "+nome+" é %.1f%s",imc," e está levemente acima do peso.");
+		}else if(imc<=34.9){
+                   System.out.printf("\nO IMC de "+nome+" é %.1f%s",imc," e está em obesidade grau 1.");
+		}else if(imc<=39.9){
+                   System.out.printf("\nO IMC de "+nome+" é %.1f%s",imc," e está em obesidade grau 2.(SEVERA!)");
+		}else if(imc>=40){
+                   System.out.printf("\nO IMC de "+nome+" é %.1f%s",imc," e está em obesidade grau 3.(MÓRBIDA!)");
+		}
+            //Depois de informa a situação de IMC do usuário, o progama pergunta se ele quer volta para fazer outra vez; 
+            System.out.print("\nCaso queira voltar ao inicio digite 'voltar': ");
+            resposta = dados.next();
+        }
+    }
+}

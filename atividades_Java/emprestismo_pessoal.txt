@@ -1,0 +1,361 @@
+package prova_2.emprestimopessoal;
+import java.util.Scanner;
+public class Prova_2Emprestimopessoal {
+
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        double emprestimo, valor_da_parcela, custo_total_emprestimo, valor_juros ;
+        int meses, escolha_banco, resposta;
+        System.out.println("Emprestimo Bancario\n");
+        System.out.print("Escolha um banco digitando seu respectivo número:\n\nBanco do Brasil ( 1 )\tCaixa Econômica Federal ( 2 )\nItaú ( 3 )\tSantader( 4 )\tBradesco ( 5 )\nRESPOSTA: ");
+        escolha_banco = leia.nextInt();
+        if(escolha_banco == 1){
+            double taxa = 3.06;
+            System.out.print("É correntista?\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+            resposta = leia.nextInt();
+            if(resposta == 1){
+                double desconto_correntista;
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                desconto_correntista = (emprestimo*0.05)/100 ;
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else if(resposta == 2){
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                 if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else{
+                System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+            }
+        }else if(escolha_banco == 2){
+            double taxa = 3.32;
+            System.out.print("É correntista?\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+            resposta = leia.nextInt();
+            if(resposta == 1){
+                double desconto_correntista;
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                desconto_correntista = (emprestimo*0.05)/100 ;
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else if(resposta == 2){
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                 if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else{
+                System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+            }
+        }else if(escolha_banco == 3){
+            double taxa = 3.7;
+            System.out.print("É correntista?\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+            resposta = leia.nextInt();
+            if(resposta == 1){
+                double desconto_correntista;
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                desconto_correntista = (emprestimo*0.05)/100 ;
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else if(resposta == 2){
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                 if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else{
+                System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+            }
+        }else if(escolha_banco == 4){
+            double taxa = 4.28;
+            System.out.print("É correntista?\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+            resposta = leia.nextInt();
+            if(resposta == 1){
+                double desconto_correntista;
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                desconto_correntista = (emprestimo*0.05)/100 ;
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else if(resposta == 2){
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                 if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else{
+                System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+            }
+        }else if(escolha_banco == 5){
+            double taxa = 4.96;
+            System.out.print("É correntista?\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+            resposta = leia.nextInt();
+            if(resposta == 1){
+                double desconto_correntista;
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                desconto_correntista = (emprestimo*0.05)/100 ;
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_correntista - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_correntista);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else if(resposta == 2){
+                System.out.print("Qual o valor do emprestimo: ");
+                emprestimo = leia.nextDouble();
+                valor_juros = (emprestimo * taxa)/100 ;
+                System.out.print("Qual o prazo do financiamento em MESES: ");
+                meses = leia.nextInt();
+                valor_da_parcela = (emprestimo + valor_juros)/meses ;
+                custo_total_emprestimo = valor_da_parcela * meses ;
+                System.out.print("O emprestimo será consignado:\nSIM( 1 )\t NÃO( 2 )\nResposta: ");
+                resposta = leia.nextInt();
+                 if(resposta == 1){
+                    double desconto_consignado;
+                    desconto_consignado = (emprestimo*0.1)/100 ;
+                    valor_da_parcela = (emprestimo + valor_juros)/meses - desconto_consignado ;
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros - desconto_consignado);
+                    System.out.print("\n");
+                }else if(resposta == 2){
+                    System.out.printf("Sua parcela ficou em %.2f",valor_da_parcela);
+                    System.out.print("\n");
+                    System.out.printf("O emprestimo sairá por %.2f",custo_total_emprestimo);
+                    System.out.print("\n");
+                    System.out.printf("O valor dos juros são: %.2f",valor_juros);
+                    System.out.print("\n");
+                }else{
+                    System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+                }
+            }else{
+                System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+            }
+        }else{
+            System.out.println("RESPONDA CORRETAMENTE DA PRÓXIMA TENTATIVA!");
+        }
+    }
+}
